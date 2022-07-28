@@ -1,8 +1,5 @@
-user : admin@opd.com
+user : admin@car.com
 pass : 123
 
-user : aa@opd.com
-pass : aa
-
-user : bb@opd.com
-pass : bb
+user : xxx@car.com
+pass : xxx
