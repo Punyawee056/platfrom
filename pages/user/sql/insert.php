@@ -4,9 +4,6 @@
 
     if($_POST['password'] == $_POST['confirm_password']) {
 
-        $dealer_id = $_POST['dealer_id'];
-        $location_id = $_POST['location_id'];
-        //$role = $_POST['customRadio'];
         if (isset($_POST['customRadio'])) { $role = $_POST['customRadio']; } else { $role = '3';}
         if (isset($_POST['upload'])) { $upload = 'true'; } else { $upload = 'false';}
 
@@ -17,11 +14,9 @@
             $hashed = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
         $image_name = 'avatar.png';
-        $sql = "INSERT INTO `user` (`email`, `password`,`dealer_id`, `location_id`, `code`, `fname`, `lname`, `phone`, `image`, `role`) 
+        $sql = "INSERT INTO `user` (`email`, `password`, `code`, `fname`, `lname`, `phone`, `image`, `role`) 
                 VALUES ('".$_POST['email']."',
                         '".$hashed."',
-                        '".$dealer_id."',
-                        '".$location_id."',
                         '".$_POST['code']."',
                         '".$_POST['fname']."',
                         '".$_POST['lname']."',

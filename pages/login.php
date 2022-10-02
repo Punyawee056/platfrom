@@ -24,18 +24,11 @@
         });';
         echo '}, 500 );</script>';
 
-        if ($_SESSION['role'] == '1') {
-            echo '<script type="text/javascript">';
-            echo 'setTimeout(function () { 
-                window.location.href = "book/index.php";';
-            echo '}, 2000 );</script>';
-        } else {
-            echo '<script type="text/javascript">';
-            echo 'setTimeout(function () { 
-                window.location.href = "search/index.php";';
-            echo '}, 2000 );</script>';
-        }
-       
+        echo '<script type="text/javascript">';
+        echo 'setTimeout(function () { 
+            window.location.href = "enroll/index.php";';
+        echo '}, 2000 );</script>';
+
     } else {        
         echo '<script type="text/javascript">';
         echo 'setTimeout(function () { swal.fire({
@@ -67,7 +60,7 @@
     <meta name="keywords"
         content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>ระบบจัดการสต็อกรถยนต์</title>
+    <title>ระบบสมัครเรียน</title>
     <link rel="apple-touch-icon" href="../app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
@@ -163,7 +156,7 @@
                                 </g>
                             </g>
                         </svg>
-                        <h2 class="brand-text text-primary ml-1">ระบบจัดการสต็อกรถยนต์</h2>
+                        <h2 class="brand-text text-primary ml-1">ระบบสมัครเรียน</h2>
                     </a>
 
                     <form class="mt-2" action="" method="POST">
@@ -193,6 +186,8 @@
                         <button type="submit" name="submit"
                             class="btn btn-primary btn-block waves-effect waves-float waves-light"
                             tabindex="3">เข้าสู่ระบบ</button>
+                            <br>
+                        ยังไม่มีบัญชีผู้ใช้งาน? <a href="register.php">สมัครสมาชิก</a>
                     </form>
 
 

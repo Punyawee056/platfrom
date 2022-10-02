@@ -40,6 +40,7 @@ a:hover {
 </style>
 <!-- END: fonts-->
 
+<?php //if($row_me['role'] == 1 || $row_me['role'] == '2') { ?>
 <!-- BEGIN: Header-->
 <nav
     class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow new-title-css">
@@ -51,7 +52,7 @@ a:hover {
             </ul>
             <ul class="nav navbar-nav bookmark-icons">
                 <li class="nav-item d-none d-lg-block">
-                    <h3>ระบบจัดการสต็อกรถยนต์</h3>
+                    <h3>ระบบสมัครเรียน</h3>
                 </li>
             </ul>
         </div>
@@ -94,7 +95,7 @@ a:hover {
     <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
             <li class="nav-item mr-auto"><a class="navbar-brand"
-                    href="../../html/ltr/vertical-menu-template-bordered/index.html"><span class="brand-logo">
+                    href=""><span class="brand-logo">
                         <svg viewbox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" height="24">
                             <defs>
@@ -138,6 +139,7 @@ a:hover {
                         data-ticon="disc"></i></a></li>
         </ul>
     </div>
+    
     <div class="shadow-bottom"></div>
     <div class="main-menu-content">
         <ul class="navigation navigation-main new-title-css" id="main-menu-navigation" data-menu="menu-navigation">
@@ -146,68 +148,32 @@ a:hover {
                     data-feather="more-horizontal"></i>
             </li>
             <li class=" nav-item"><a
-                    class="d-flex align-items-center <?php echo $pages == 'branch' ? 'custom_active': '' ?>"
-                    href="../branch/index.php"><i data-feather="map"></i><span class="menu-title text-truncate"
-                        data-i18n="branch">สาขา</span></a>
+                    class="d-flex align-items-center <?php echo $pages == 'academic_year' ? 'custom_active': '' ?>"
+                    href="../academic_year/index.php"><i data-feather="calendar"></i><span class="menu-title text-truncate"
+                        data-i18n="academic_year">ปีการศึกษา</span></a>
             </li>
             <li class=" nav-item"><a
-                    class="d-flex align-items-center <?php echo $pages == 'dealer' ? 'custom_active': '' ?>"
-                    href="../dealer/index.php"><i data-feather="map-pin"></i><span class="menu-title text-truncate"
-                        data-i18n="dealer">Dealer</span></a>
+                    class="d-flex align-items-center <?php echo $pages == 'level' ? 'custom_active': '' ?>"
+                    href="../level/index.php"><i data-feather="layers"></i><span class="menu-title text-truncate"
+                        data-i18n="level">ระดับชั้น - สาขา</span></a>
             </li>
             <li class=" nav-item"><a
-                    class="d-flex align-items-center <?php echo $pages == 'model' ? 'custom_active': '' ?>"
-                    href="../model/index.php"><i data-feather="codepen"></i><span class="menu-title text-truncate"
-                        data-i18n="model">Model</span></a>
-            </li>
-            <!-- <li class=" nav-item"><a
-                    class="d-flex align-items-center <?php echo $pages == 'color' ? 'custom_active': '' ?>"
-                    href="../color/index.php"><i data-feather="tag"></i><span class="menu-title text-truncate"
-                        data-i18n="color">สี</span></a>
-            </li> -->
-            <li class=" nav-item"><a
-                    class="d-flex align-items-center <?php echo $pages == 'tmc' ? 'custom_active': '' ?>"
-                    href="../tmc/index.php"><i data-feather="framer"></i><span class="menu-title text-truncate"
-                        data-i18n="tmc">สถานะ TMC</span></a>
-            </li>
-            <li class=" nav-item"><a
-                    class="d-flex align-items-center <?php echo $pages == 'floorplan' ? 'custom_active': '' ?>"
-                    href="../floorplan/index.php"><i data-feather="layers"></i><span class="menu-title text-truncate"
-                        data-i18n="floorplan">สถานะ Floorplan</span></a>
-            </li>
-
-            <li class=" navigation-header"><span data-i18n="รถ" class="new-title-css">ข้อมูลรถ</span><i
-                    data-feather="more-horizontal"></i>
-            </li>
-            <li class=" nav-item"><a
-                    class="d-flex align-items-center <?php echo $pages == 'car' ? 'custom_active': '' ?>"
-                    href="../car/index.php"><i data-feather="truck"></i><span class="menu-title text-truncate"
-                        data-i18n="car">รถ</span></a>
+                    class="d-flex align-items-center <?php echo $pages == 'prefix' ? 'custom_active': '' ?>"
+                    href="../prefix/index.php"><i data-feather="hash"></i><span class="menu-title text-truncate"
+                        data-i18n="prefix">คำนำหน้า</span></a>
             </li>
             <?php } ?>
 
-            <li class=" navigation-header"><span data-i18n="ข้อมูลการจอง" class="new-title-css">ข้อมูลการจอง</span><i
+            <li class=" navigation-header"><span data-i18n="การรับสมัคร" class="new-title-css">การรับสมัคร</span><i
                     data-feather="more-horizontal"></i>
             </li>
-            <?php if($row_me['role'] == '1') { ?>
             <li class=" nav-item"><a
-                    class="d-flex align-items-center <?php echo $pages == 'book' ? 'custom_active': '' ?>"
-                    href="../book/index.php"><i data-feather="check"></i><span class="menu-title text-truncate"
-                        data-i18n="book">จอง</span></a>
+                    class="d-flex align-items-center <?php echo $pages == 'enroll' ? 'custom_active': '' ?>"
+                    href="../enroll/index.php"><i data-feather="tablet"></i><span class="menu-title text-truncate"
+                        data-i18n="enroll">สมัครเรียน</span></a>
             </li>
-            <?php } ?>
-            <li class=" nav-item"><a
-                    class="d-flex align-items-center <?php echo $pages == 'search' ? 'custom_active': '' ?>"
-                    href="../search/index.php"><i data-feather="search"></i><span class="menu-title text-truncate"
-                        data-i18n="search">ค้นหา</span></a>
-            </li>
-            <li class=" nav-item"><a
-                    class="d-flex align-items-center <?php echo $pages == 'delivery' ? 'custom_active': '' ?>"
-                    href="../delivery/index.php"><i data-feather="clock"></i><span class="menu-title text-truncate"
-                        data-i18n="delivery">กำหนดส่งมอบ</span></a>
-            </li>
-
-            <?php if($row_me['role'] == '1') { ?>
+            
+            <?php if($row_me['role'] == '1' || $row_me['role'] == '2') { ?>
                 <li class=" navigation-header"><span data-i18n="ผู้ใช้งาน" class="new-title-css">ข้อมูลผู้ใช้งาน</span><i
                     data-feather="more-horizontal"></i>
                 </li>
@@ -221,3 +187,4 @@ a:hover {
     </div>
 </div>
 <!-- END: Main Menu-->
+<?php //} ?>

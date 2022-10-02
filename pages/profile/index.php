@@ -169,20 +169,6 @@
                                                         maxlength="50" value="<?php echo $row_me['role_name']; ?>" disabled>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-4 col-md-4 col-12 mb-1">
-                                                <div class="form-group">
-                                                    <label for="dealer">Dealer :</label>
-                                                    <input type="yext" class="form-control" id="dealer" name="dealer"
-                                                        maxlength="255" value="<?php echo $row_me['dealer']; ?>" disabled>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-md-4 col-12 mb-1">
-                                                <div class="form-group">
-                                                    <label for="location">Location :</label>
-                                                    <input type="yext" class="form-control" id="location" name="location"
-                                                        maxlength="255" value="<?php echo $row_me['location']; ?>" disabled>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>

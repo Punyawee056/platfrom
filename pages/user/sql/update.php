@@ -1,8 +1,6 @@
 <?php include_once('../../includes/authen.php'); 
     if(isset($_POST['submit'])) {
       
-        $dealer_id = $_POST['dealer_id'];
-        $location_id = $_POST['location_id'];
         if($_POST['user_id'] == '1'){ $customRadio = '1'; } else { $customRadio = $_POST['customRadio']; }
         if (isset($_POST['upload'])) { $upload = 'true'; } else { $upload = 'false';}
         if($_POST['user_id'] == '1'){ $upload = 'true'; }
@@ -12,8 +10,6 @@
             `fname` = '".$_POST['fname']."',
             `lname` = '".$_POST['lname']."',
             `phone` = '".$_POST['phone']."',
-            `dealer_id` = '".$dealer_id."',
-            `location_id` = '".$location_id."',
             `role` = '".$customRadio."'
         WHERE `id` = '".$_POST['user_id']."';";
 

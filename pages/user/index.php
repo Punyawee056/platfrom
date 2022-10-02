@@ -1,8 +1,5 @@
 <?php 
   require_once('../includes/authen.php');
-
-    $sql_user = "SELECT * FROM view_user ORDER BY id DESC";
-    $result_user = $conn->query($sql_user);
 ?>
 
 <!DOCTYPE html>
@@ -82,7 +79,15 @@
 <body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click"
     data-menu="vertical-menu-modern" data-col="">
 
-    <?php require_once('../includes/menu.php'); ?>
+    <?php require_once('../includes/menu.php');
+
+        if ($row_me['role'] == '1') {
+            $sql_user = "SELECT * FROM view_user ORDER BY id DESC";
+        } else if ($row_me['role'] == '2')  {
+            $sql_user = "SELECT * FROM view_user WHERE role IN (2,3) ORDER BY id DESC";
+        }
+        $result_user = $conn->query($sql_user);
+    ?>
 
     <!-- BEGIN: Content-->
     <div class="app-content content ">
@@ -120,31 +125,10 @@
                                     <form action="sql/insert.php" method="post" enctype="multipart/form-data">
                                         <div class="modal-body">
 
-                                            <div class="form-group">
-                                                <label>Dealer : </label>
-                                                <select class="select2 form-control form-control-md" name="dealer_id" id="dealer"
-                                                    required>
-                                                    <option value="">-- เลือก Dealer --</option>
-                                                        <?php 
-                                                            $sql_dealer = "SELECT * FROM `dealer` ORDER BY `code` ASC";
-                                                            $result_dealer = $conn->query($sql_dealer);
-                                                        ?>
-                                                        
-                                                         <?php while($result = $result_dealer->fetch_assoc()): ?>
-                                                            <option value="<?=$result['id']?>"><?=$result['code'].' : '.$result['name']?></option>
-                                                        <?php endwhile; ?>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Location</label>
-                                                <select class="select2 form-control form-control-md" id="location" name="location_id">
-                                                    <option value="">-- เลือก Location --</option>
-                                                </select>
-										    </div>
                                             <label>รหัสผู้ใช้งาน : </label>
                                             <div class="form-group">
                                                 <input type="text" placeholder="รหัสผู้ใช้งาน" class="form-control"
-                                                    name="code" maxlength="10" required />
+                                                    name="code" maxlength="10" />
                                             </div>
                                             <label>ชื่อ : </label>
                                             <div class="form-group">
@@ -183,11 +167,19 @@
                                                         $result_role = $conn->query($sql_role);
                                                         if ($result_role->num_rows) {
                                                         while($row_role = $result_role->fetch_assoc()) { 
+                                                            if($row_role['id'] == 1 && $row_me['role'] == '2')
+                                                            {
+                                                                $dis = "disabled";
+                                                            }
+                                                            else
+                                                            {
+                                                                $dis = "";
+                                                            } 
                                                     ?>
                                                 <div class="custom-control custom-radio"
                                                     style="margin-top: 0px;margin-left: 20px;">
                                                     <input type="radio" id="customRadio<?php echo $row_role['id']; ?>" name="customRadio"
-                                                        class="custom-control-input" value="<?php echo $row_role['id']; ?>" required>
+                                                        class="custom-control-input" value="<?php echo $row_role['id']; ?>" required <?php echo $dis; ?>>
                                                     <label class="custom-control-label"
                                                         for="customRadio<?php echo $row_role['id']; ?>"><?php echo $row_role['role']; ?></label>
                                                 </div>
@@ -222,8 +214,6 @@
                                             <th class="text-center">ชื่อ - นามสกุล / รหัส</th>
                                             <th class="text-center">เบอร์โทรศัพท์</th>
                                             <th class="text-center">อีเมล</th>
-                                            <th class="text-center">Dealer</th>
-                                            <th class="text-center">Loction</th>
                                             <th class="text-center">บทบาท</th>
                                             <th class="text-center">จัดการ</th>
                                         </tr>
@@ -257,8 +247,6 @@
                                             </td>
                                             <td class="text-center"><?php echo $row_user['phone']; ?></td>
                                             <td><?php echo $row_user['email']; ?></td>
-                                            <td><?php echo $row_user['dealer']; ?></td>
-                                            <td><?php echo $row_user['location']; ?></td>
                                             <td class="text-center">
                                             <div class="badge badge-pill badge-light-<?php echo $row_user['color']; ?>"><?php echo $row_user['role_name']; ?></div>
                                             </td>
@@ -295,103 +283,12 @@
                                                         enctype="multipart/form-data">
                                                         <div class="modal-body">
 
-                                                        <div class="form-group">
-                                                        <label>Dealer : </label>
-                                                        <!-- onchange="myFunction()" -->
-                                                        <select class="select2 form-control form-control-md" id="dealer<?php echo $row_user['id']; ?>"  required>
-                                                            <option value="">-- เลือก Dealer --</option>
-                                                                <?php 
-                                                                    $sql_dealer = "SELECT * FROM `dealer` ORDER BY `code` ASC";
-                                                                    $result_dealer = $conn->query($sql_dealer);
-                                                                    if ($result_dealer->num_rows){
-                                                                        while($result = $result_dealer->fetch_assoc()) { 
-                                                                            if($row_user['dealer_id'] == $result['id'])
-                                                                            {
-                                                                            $sel = "selected";
-                                                                            }
-                                                                            else
-                                                                            {
-                                                                            $sel = "";
-                                                                            } 
-                                                                ?>
-                                                                    <option value="<?=$result['id']?>" <?php echo $sel;?>><?=$result['code'].' : '.$result['name']?></option>
-                                                                <?php 
-                                                                        }
-                                                                    } 
-                                                                ?>   
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>Location</label>
-                                                        <select class="select2 form-control form-control-md" id="location<?php echo $row_user['id']; ?>" >
-                                                        <option value="">-- เลือก Location --</option>
-                                                        <?php 
-                                                            $sql_location = "SELECT * FROM `location` WHERE `dealer_id` = '".$row_user['dealer_id']."' ";
-                                                            $result_location = $conn->query($sql_location);
-                                                            if ($result_location->num_rows){
-                                                            while($row_location = $result_location->fetch_assoc()) { 
-                                                                                                    
-                                                                if($row_user['location_id'] == $row_location['id'])
-                                                                {
-                                                                $sel = "selected";
-                                                                }
-                                                                else
-                                                                {
-                                                                $sel = "";
-                                                                } 
-                                                            ?>
-                                                            <option value="<?php echo $row_user['location_id']; ?>" <?php echo $sel;?>>
-                                                                <?php echo $row_location['code'].' : '.$row_location['name']; ?>
-                                                            </option>
-                                                            <?php 
-                                                                    }
-                                                                } 
-                                                            ?>  
-                                                        </select>
-                                                    </div>
-                                                  
-                                                    <input type="hidden" name="dealer_id" id="dealer_txt<?php echo $row_user['id']; ?>">
-                                                    <input type="hidden" name="location_id" id="location_txt<?php echo $row_user['id']; ?>"> 
-                                                    
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script language="JavaScript" type="text/javascript">
-     $(function(){
-        var dealerObject = $('#dealer<?php echo $row_user['id']; ?>');
-        var locationObject = $('#location<?php echo $row_user['id']; ?>');
-
-        // on change dealer
-        dealerObject.on('change', function(){
-            var dealerId = $(this).val();
-            // console.log(dealerId);
-            $("#dealer_txt<?php echo $row_user['id']; ?>").val(dealerId);
-
-            locationObject.html('<option value="">-- เลือก Location --</option>');
-
-            $.get('../get_location.php?dealer_id=' + dealerId, function(data){
-                var result = JSON.parse(data);
-                $.each(result, function(index, item){
-                    locationObject.append(
-                        $('<option></option>').val(item.id).html(item.code + ' : ' + item.name)
-                    );
-                });
-            });
-        });
-
-        // on change location
-        locationObject.on('change', function(){
-            var locationId = $(this).val();
-            $("#location_txt<?php echo $row_user['id']; ?>").val(locationId);
-        });
-    });
-
-</script>
-
                                                             <label>รหัสผู้ใช้งาน : </label>
                                                             <div class="form-group">
                                                                 <input type="text" placeholder="รหัสผู้ใช้งาน"
                                                                     class="form-control" name="code" maxlength="10"
                                                                     value="<?php echo $row_user['code']; ?>"
-                                                                    required />
+                                                                     />
                                                             </div>
                                                             <label>ชื่อ : </label>
                                                             <div class="form-group">
@@ -434,11 +331,20 @@
                                                                             {
                                                                                 $sel = "";
                                                                             } 
+
+                                                                        if($row_role['id'] == 1 && $row_me['role'] == '2')
+                                                                            {
+                                                                                $dis = "disabled";
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                $dis = "";
+                                                                            } 
                                                                 ?>
                                                                 <div class="custom-control custom-radio"
                                                                     style="margin-top: 0px;margin-left: 20px;">
                                                                     <input type="radio" id="customRadio<?php echo $row_role['id']; ?><?php echo $row_user['id']; ?>" name="customRadio"
-                                                                        class="custom-control-input" <?php echo $sel; ?> <?php if($row_user['id'] == '1'){ echo 'disabled'; } ?> value="<?php echo $row_role['id']; ?>">
+                                                                        class="custom-control-input" <?php echo $sel; ?> <?php echo $dis; ?> <?php if($row_user['id'] == '1'){ echo 'disabled'; } ?> value="<?php echo $row_role['id']; ?>">
                                                                     <label class="custom-control-label"
                                                                         for="customRadio<?php echo $row_role['id']; ?><?php echo $row_user['id']; ?>"><?php echo $row_role['role']; ?></label>
                                                                 </div>
