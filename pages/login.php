@@ -187,7 +187,8 @@
                             class="btn btn-primary btn-block waves-effect waves-float waves-light"
                             tabindex="3">เข้าสู่ระบบ</button>
                             <br>
-                        ยังไม่มีบัญชีผู้ใช้งาน? <a href="register.php">สมัครสมาชิก</a>
+                        <a href="enroll.php">สมัครเรียน</a>
+                        <!-- ยังไม่มีบัญชีผู้ใช้งาน? <a href="register.php">สมัครสมาชิก</a> -->
                     </form>
 
 
