@@ -60,7 +60,7 @@
     <meta name="keywords"
         content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>ระบบสมัครเรียน</title>
+    <title>MFU CLUB</title>
     <link rel="apple-touch-icon" href="../app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
@@ -94,16 +94,78 @@
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
 
-    body {
-        font-family: 'Prompt', sans-serif;
-        font-size: 16px;
-    }
+ /* เปลี่ยนโทนสีพื้นหลังและข้อความให้เข้ากับสีแดงเลือดหมูและทอง */
+body {
+    font-family: 'Prompt', sans-serif;
+    font-size: 16px;
+    background-color: #800020; /* สีแดงเลือดหมู */
+    color: #fff; /* สีข้อความเป็นขาว */
+}
 
-    .new-title-css {
-        font-family: 'Prompt', sans-serif;
-        font-size: 26px;
-        font-weight: revert;
-    }
+.new-title-css {
+    font-family: 'Prompt', sans-serif;
+    font-size: 26px;
+    font-weight: revert;
+    color: #FFD700; /* สีทองสำหรับหัวข้อ */
+}
+
+/* ปรับสีแบรนด์โลโก้ */
+.brand-text-custom {
+    color: #FFD700; /* สีทอง */
+}
+
+
+/* ปรับสีของฟอร์มและปุ่ม */
+.card-body {
+    background-color: #800020; /* สีแดงเลือดหมู */
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.form-control {
+    border: 1px solid #FFD700; /* กรอบของฟอร์มเป็นสีทอง */
+    background-color: #5C0A2E; /* เบอร์กันดีเข้ม */
+    color: #fff; /* สีตัวอักษรในฟอร์มเป็นขาว */
+}
+
+.form-label {
+    color: #FFD700; /* สีทองสำหรับข้อความป้าย */
+}
+
+.form-password-toggle .form-control {
+    border-color: #FFD700; /* กรอบของฟอร์มเป็นสีทอง */
+}
+
+.btn-primary {
+    background-color: #FFD700 !important;  /* สีทอง */
+    border-color: #FFD700 !important;      /* กรอบปุ่มเป็นสีทอง */
+    color: #800020 !important;             /* ข้อความบนปุ่มเป็นสีแดงเลือดหมู */
+}
+
+.btn-primary:hover {
+    background-color: #D4AF37 !important; /* ปรับสีทองให้เข้มขึ้นเมื่อโฮเวอร์ */
+}
+
+
+a {
+    color: #FFD700; /* สีทองสำหรับลิงก์ */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* เพิ่มความสวยงามสำหรับไอคอน */
+.input-group-text {
+    background-color: #FFD700; /* สีทองสำหรับไอคอน */
+    color: #800020; /* สีแดงเลือดหมูสำหรับไอคอน */
+}
+
+.input-group-merge .form-control {
+    border-color: #FFD700; /* กรอบของฟอร์มเป็นสีทอง */
+}
+
     </style>
     <!-- END: fonts-->
 
@@ -121,42 +183,34 @@
             <div class="card mb-0">
                 <div class="card-body">
                     <a href="javascript:void(0);" class="brand-logo">
-                        <svg viewBox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" height="28">
-                            <defs>
-                                <linearGradient id="linearGradient-1" x1="100%" y1="10.5120544%" x2="50%"
-                                    y2="89.4879456%">
-                                    <stop stop-color="#000000" offset="0%"></stop>
-                                    <stop stop-color="#FFFFFF" offset="100%"></stop>
-                                </linearGradient>
-                                <linearGradient id="linearGradient-2" x1="64.0437835%" y1="46.3276743%" x2="37.373316%"
-                                    y2="100%">
-                                    <stop stop-color="#EEEEEE" stop-opacity="0" offset="0%"></stop>
-                                    <stop stop-color="#FFFFFF" offset="100%"></stop>
-                                </linearGradient>
-                            </defs>
-                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="Artboard" transform="translate(-400.000000, -178.000000)">
-                                    <g id="Group" transform="translate(400.000000, 178.000000)">
-                                        <path class="text-primary" id="Path"
-                                            d="M-5.68434189e-14,2.84217094e-14 L39.1816085,2.84217094e-14 L69.3453773,32.2519224 L101.428699,2.84217094e-14 L138.784583,2.84217094e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L6.71554594,44.4188507 C2.46876683,39.9813776 0.345377275,35.1089553 0.345377275,29.8015838 C0.345377275,24.4942122 0.230251516,14.560351 -5.68434189e-14,2.84217094e-14 Z"
-                                            style="fill: currentColor"></path>
-                                        <path id="Path1"
-                                            d="M69.3453773,32.2519224 L101.428699,1.42108547e-14 L138.784583,1.42108547e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L32.8435758,70.5039241 L69.3453773,32.2519224 Z"
-                                            fill="url(#linearGradient-1)" opacity="0.2"></path>
-                                        <polygon id="Path-2" fill="#000000" opacity="0.049999997"
-                                            points="69.3922914 32.4202615 32.8435758 70.5039241 54.0490008 16.1851325">
-                                        </polygon>
-                                        <polygon id="Path-21" fill="#000000" opacity="0.099999994"
-                                            points="69.3922914 32.4202615 32.8435758 70.5039241 58.3683556 20.7402338">
-                                        </polygon>
-                                        <polygon id="Path-3" fill="url(#linearGradient-2)" opacity="0.099999994"
-                                            points="101.428699 0 83.0667527 94.1480575 130.378721 47.0740288"></polygon>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg>
-                        <h2 class="brand-text text-primary ml-1">ระบบสมัครเรียน</h2>
+                    <svg viewBox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="28">
+    <defs>
+        <linearGradient id="linearGradient-1" x1="100%" y1="10.5120544%" x2="50%" y2="89.4879456%">
+            <stop stop-color="#800020" offset="0%"></stop> <!-- ใช้สีแดงเลือดหมู -->
+            <stop stop-color="#FFD700" offset="100%"></stop> <!-- ใช้สีทอง -->
+        </linearGradient>
+        <linearGradient id="linearGradient-2" x1="64.0437835%" y1="46.3276743%" x2="37.373316%" y2="100%">
+            <stop stop-color="#FFD700" stop-opacity="0" offset="0%"></stop> <!-- ใช้สีทองที่โปร่งใส -->
+            <stop stop-color="#800020" offset="100%"></stop> <!-- ใช้สีแดงเลือดหมู -->
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-400.000000, -178.000000)">
+            <g id="Group" transform="translate(400.000000, 178.000000)">
+                <!-- เปลี่ยนสีของ Path และ Polygon ให้เข้ากับโทนสี -->
+                <path class="text-primary" id="Path" d="M-5.68434189e-14,2.84217094e-14 L39.1816085,2.84217094e-14 L69.3453773,32.2519224 L101.428699,2.84217094e-14 L138.784583,2.84217094e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L6.71554594,44.4188507 C2.46876683,39.9813776 0.345377275,35.1089553 0.345377275,29.8015838 C0.345377275,24.4942122 0.230251516,14.560351 -5.68434189e-14,2.84217094e-14 Z" style="fill: url(#linearGradient-1)"></path>
+                <path id="Path1" d="M69.3453773,32.2519224 L101.428699,1.42108547e-14 L138.784583,1.42108547e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L32.8435758,70.5039241 L69.3453773,32.2519224 Z" fill="url(#linearGradient-1)" opacity="0.2"></path>
+                <polygon id="Path-2" fill="#800020" opacity="0.05" points="69.3922914 32.4202615 32.8435758 70.5039241 54.0490008 16.1851325"></polygon>
+                <polygon id="Path-21" fill="#800020" opacity="0.1" points="69.3922914 32.4202615 32.8435758 70.5039241 58.3683556 20.7402338"></polygon>
+                <polygon id="Path-3" fill="url(#linearGradient-2)" opacity="0.1" points="101.428699 0 83.0667527 94.1480575 130.378721 47.0740288"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
+
+                        <h2 class="brand-text-custom ml-1">MFU CLUB</h2>
+
+
                     </a>
 
                     <form class="mt-2" action="" method="POST">
@@ -167,7 +221,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password" class="form-label">รหัสผ่าน</label>
+                            <label for="password" class="form-label">เบอร์โทรศัพท์</label>
                             <div class="input-group input-group-merge form-password-toggle">
                                 <input type="password" class="form-control form-control-merge" name="password"
                                     tabindex="2" placeholder="············" required>
@@ -187,7 +241,7 @@
                             class="btn btn-primary btn-block waves-effect waves-float waves-light"
                             tabindex="3">เข้าสู่ระบบ</button>
                             <br>
-                        <a href="enroll.php">สมัครเรียน</a>
+                        <a href="enroll.php">สมัครเข้าชมรม</a>
                         <!-- ยังไม่มีบัญชีผู้ใช้งาน? <a href="register.php">สมัครสมาชิก</a> -->
                     </form>
 

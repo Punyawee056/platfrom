@@ -96,8 +96,8 @@
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">ระดับชั้น (<?php echo $row['code'].' : '.$row['name']; ?>)</h2>
-                            <h2 class="float-left mb-0 pl-1">สาขา</h2>
+                            <h2 class="content-header-title float-left mb-0">หมวดหมู่ชมรม (<?php echo $row['code'].' : '.$row['name']; ?>)</h2>
+                            <h2 class="float-left mb-0 pl-1">ชมรม</h2>
                         </div>
                     </div>
                 </div>
@@ -124,14 +124,10 @@
                                     </div>
                                     <form action="sql/insert_major.php" method="post" enctype="multipart/form-data">
                                         <div class="modal-body">
-                                            <label>รหัสสาขา : </label>
+                                           
+                                            <label>ชมรม : </label>
                                             <div class="form-group">
-                                                <input type="text" placeholder="รหัสสาขา" class="form-control"
-                                                    name="code" maxlength="10" required />
-                                            </div>
-                                            <label>สาขา : </label>
-                                            <div class="form-group">
-                                                <input type="text" placeholder="สาขา" class="form-control"
+                                                <input type="text" placeholder="ชมรม" class="form-control"
                                                     name="name" maxlength="255" required />
                                             </div>
                                         </div>
@@ -158,9 +154,9 @@
                                     <thead class="thead-default">
                                         <tr>
                                             <!-- <th class="text-center" style="width: 110px;">ลำดับ</th> -->
-                                            <th class="text-center">รหัสสาขา</th>
-                                            <th class="text-center">สาขา</th>
-                                            <th class="text-center">จัดการ</th>
+                                            
+                                            <th class="text-center">ชมรม</th>
+                                         
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -201,13 +197,7 @@
                                                     <form action="sql/update_major.php" method="post"
                                                         enctype="multipart/form-data">
                                                         <div class="modal-body">
-                                                            <label>รหัสสาขา : </label>
-                                                            <div class="form-group">
-                                                                <input type="text" placeholder="รหัสสาขา"
-                                                                    class="form-control" name="code" maxlength="10"
-                                                                    value="<?php echo $row_major['code']; ?>"
-                                                                    required />
-                                                            </div>
+                                                           
                                                             <label>สาขา : </label>
                                                             <div class="form-group">
                                                                 <input type="text" placeholder="สาขา"

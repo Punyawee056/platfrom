@@ -15,7 +15,7 @@ require_once '../includes/authen.php';
     <meta name="keywords"
         content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>สมัครเรียน</title>
+    <title>CLUB</title>
     <link rel="apple-touch-icon" href="../../app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
@@ -58,6 +58,31 @@ require_once '../includes/authen.php';
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
 
+    .btn-warning {
+    background-color: #FFD700 !important; /* สีพื้นหลังของปุ่มแก้ไขเป็นสีทอง */
+    border-color: #FFD700 !important; /* ขอบของปุ่มแก้ไขเป็นสีทอง */
+    color: #800020 !important; /* สีข้อความในปุ่มแก้ไขเป็นสีแดงเลือดหมู */
+}
+
+.btn-warning:hover {
+    background-color: #e8c07d !important; /* เปลี่ยนสีพื้นหลังเป็นสีทองอ่อนเมื่อ hover */
+    border-color: #e8c07d !important; /* ขอบของปุ่มแก้ไขเป็นสีทองอ่อนเมื่อ hover */
+    color: #800020 !important; /* เปลี่ยนข้อความเป็นสีแดงเลือดหมูเมื่อ hover */
+}
+
+/* ปรับสีปุ่มลบ */
+.btn-danger {
+    background-color: #800020 !important; /* สีพื้นหลังของปุ่มลบเป็นสีแดงเลือดหมู */
+    border-color: #800020 !important; /* ขอบของปุ่มลบเป็นสีแดงเลือดหมู */
+    color: #f1e0d6 !important; /* สีข้อความในปุ่มลบเป็นสีทอง */
+}
+
+.btn-danger:hover {
+    background-color: #e8c07d !important; /* เปลี่ยนสีพื้นหลังเป็นสีทองเมื่อ hover */
+    border-color: #e8c07d !important; /* ขอบของปุ่มลบเป็นสีทองเมื่อ hover */
+    color: #800020 !important; /* เปลี่ยนข้อความเป็นสีแดงเลือดหมูเมื่อ hover */
+}
+
     body {
         font-family: 'Prompt', sans-serif;
         font-size: 16px;
@@ -68,6 +93,46 @@ require_once '../includes/authen.php';
         font-size: 26px;
         font-weight: revert;
     }
+    /* ปรับสีปุ่มบันทึก */
+.modal-footer .btn-primary {
+    background-color: #800020 !important; /* สีพื้นหลังของปุ่มบันทึกเป็นสีแดงเลือดหมู */
+    border-color: #800020 !important; /* ขอบของปุ่มเป็นสีแดงเลือดหมู */
+    color: #f1e0d6 !important; /* สีข้อความในปุ่มเป็นสีทอง */
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #e8c07d !important; /* เปลี่ยนสีพื้นหลังเป็นสีทองเมื่อ hover */
+    border-color: #e8c07d !important; /* ขอบของปุ่มเป็นสีทองเมื่อ hover */
+}
+
+.modal-footer .btn-secondary {
+    background-color: #f1e0d6 !important; /* สีพื้นหลังของปุ่มยกเลิกเป็นสีทอง */
+    border-color: #f1e0d6 !important; /* ขอบของปุ่มยกเลิกเป็นสีทอง */
+    color: #800020 !important; /* สีข้อความในปุ่มยกเลิกเป็นสีแดงเลือดหมู */
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #800020 !important; /* เปลี่ยนเป็นสีแดงเลือดหมูเมื่อ hover */
+    border-color: #800020 !important; /* ขอบของปุ่มยกเลิกเป็นสีแดงเลือดหมูเมื่อ hover */
+    color: #f1e0d6 !important; /* เปลี่ยนข้อความเป็นสีทองเมื่อ hover */
+}
+
+    /* เปลี่ยนสีของปุ่มเพิ่มข้อมูล */
+.text-right .btn-primary {
+    background-color: #800020 !important; /* สีพื้นหลังของปุ่มเป็นสีแดงเลือดหมู */
+    border-color: #800020 !important; /* ขอบของปุ่มเป็นสีแดงเลือดหมู */
+    color: #f1e0d6 !important; /* สีของข้อความในปุ่มเป็นสีทอง */
+}
+
+.text-right .btn-primary:hover {
+    background-color: #e8c07d !important; /* เปลี่ยนเป็นสีทองเมื่อ hover */
+    border-color: #e8c07d !important; /* ขอบของปุ่มเป็นสีทองเมื่อ hover */
+}
+
+.text-right .btn-primary i {
+    color: #f1e0d6 !important; /* สีของไอคอนเป็นสีทอง */
+}
+
     </style>
     <!-- END: fonts-->
 
@@ -105,7 +170,7 @@ require_once '../includes/authen.php';
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">สมัครเรียน <?php //echo $num; ?></h2>
+                            <h2 class="content-header-title float-left mb-0">สมัครเข้าชมรม <?php //echo $num; ?></h2>
                         </div>
                     </div>
                 </div>
@@ -133,9 +198,9 @@ require_once '../includes/authen.php';
                                             <th class="text-center">ชื่อ - นามสกุล</th>
                                             <th class="text-center">เบอร์โทรศัพท์</th>
                                             <th class="text-center">อีเมล</th>
+                                            <th class="text-center">ระดับชั้นปีการศึกษา</th>
                                             <th class="text-center">ปีการศึกษา</th>
-                                            <th class="text-center">ระดับชั้น</th>
-                                            <th class="text-center">สาขา</th>
+                                            <th class="text-center">ชมรม</th>
                                             <th class="text-center">จัดการ</th>
                                         </tr>
                                     </thead>

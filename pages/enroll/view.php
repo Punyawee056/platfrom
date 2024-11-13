@@ -94,11 +94,10 @@
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">สมัครเรียน</h2>
+                            <h2 class="content-header-title float-left mb-0">สมัครเข้าชมรม</h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="view.php?enroll_id=<?php echo $row['enroll_id']; ?>">แสดง</a>
-                                    </li>
+                                   
                                 </ol>
                             </div>
                         </div>
@@ -135,82 +134,20 @@
                                                 <h4><?php echo $row['lname_th']; ?></h4>
                                         </div>
 
-                                        <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>ชื่อ (ภาษาอังกฤษ) :</h4>
-                                        </div>
-                                        <div class="col-xl-10 col-md-10 col-12 mb-2">
-                                                <h4><?php echo $row['fname_en']; ?></h4>
-                                        </div>
+                                        
 
                                         <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>นามสกุล (ภาษาอังกฤษ) :</h4>
-                                        </div>
-                                        <div class="col-xl-10 col-md-10 col-12 mb-2">
-                                                <h4><?php echo $row['lname_en']; ?></h4>
-                                        </div>
-
-                                        <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>เลขบัตรประชาชน :</h4>
-                                        </div>
-                                        <div class="col-xl-10 col-md-10 col-12 mb-2">
-                                                <h4><?php echo $row['id_card']; ?></h4>
-                                        </div>
-
-                                        <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>วัน/เดือน/ปี เกิด :</h4>
+                                                <h4>วัน/เดือน/ปี เกิด:</h4>
                                         </div>
                                         <div class="col-xl-10 col-md-10 col-12 mb-2">
                                                 <h4><?php echo $row['date_of_birth']; ?></h4>
                                         </div>
 
-                                        <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>กรุ๊ปเลือด :</h4>
-                                        </div>
-                                        <div class="col-xl-10 col-md-10 col-12 mb-2">
-                                                <h4><?php echo $row['blood_type']; ?></h4>
-                                        </div>
+                                       
 
-                                        <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>เชื้อชาติ :</h4>
-                                        </div>
-                                        <div class="col-xl-10 col-md-10 col-12 mb-2">
-                                                <h4><?php echo $row['ethnicity']; ?></h4>
-                                        </div>
+                                     
 
-                                        <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>สัญชาติ :</h4>
-                                        </div>
-                                        <div class="col-xl-10 col-md-10 col-12 mb-2">
-                                                <h4><?php echo $row['nationality']; ?></h4>
-                                        </div>
-
-                                        <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>ศาสนา :</h4>
-                                        </div>
-                                        <div class="col-xl-10 col-md-10 col-12 mb-2">
-                                                <h4><?php echo $row['religion']; ?></h4>
-                                        </div>
-
-                                        <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>โรคประจำตัว :</h4>
-                                        </div>
-                                        <div class="col-xl-10 col-md-10 col-12 mb-2">
-                                                <h4><?php echo $row['congenital_disease']; ?></h4>
-                                        </div>
-
-                                        <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>น้ำหนัก :</h4>
-                                        </div>
-                                        <div class="col-xl-10 col-md-10 col-12 mb-2">
-                                                <h4><?php echo $row['weight']; ?></h4>
-                                        </div>
-
-                                        <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>ส่วนสูง :</h4>
-                                        </div>
-                                        <div class="col-xl-10 col-md-10 col-12 mb-2">
-                                                <h4><?php echo $row['height']; ?></h4>
-                                        </div>
+                                      
 
                                         <div class="col-xl-2 col-md-2 col-12 mb-2">
                                                 <h4>เบอร์โทรศัพท์ :</h4>
@@ -227,7 +164,7 @@
                                         </div>
 
                                         <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>ที่อยู่ :</h4>
+                                                <h4>เหตุผลในการสมัครเข้าชมรมนี้:</h4>
                                         </div>
                                         <div class="col-xl-10 col-md-10 col-12 mb-2">
                                                 <h4><?php echo $row['address']; ?></h4>
@@ -248,19 +185,13 @@
                                         </div>
 
                                         <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>สาขา :</h4>
+                                                <h4>ชมรม :</h4>
                                         </div>
                                         <div class="col-xl-10 col-md-10 col-12 mb-2">
                                                 <h4><?php echo $row['major_name']; ?></h4>
                                         </div>
 
-                                        <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>หมายเหตุ :</h4>
-                                        </div>
-                                        <div class="col-xl-10 col-md-10 col-12 mb-2">
-                                                <h4><?php echo $row['remark']; ?></h4>
-                                        </div>
-
+                                      
                                         <div class="col-xl-2 col-md-2 col-12 mb-2">
                                                 <h4>รูปถ่าย :</h4>
                                         </div>
@@ -268,40 +199,17 @@
                                             <h4> <a href="../images/enroll/profile/<?php echo $row['image_profile']; ?>" target="_blank"><?php echo $row['image_profile']; ?></a></h4>
                                         </div>
 
-                                        <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>สำเนาบัตรประชาชน :</h4>
-                                        </div>
-                                        <div class="col-xl-10 col-md-10 col-12 mb-2">
-                                                <h4> <a href="../images/enroll/id_card/<?php echo $row['image_id_card']; ?>" target="_blank"><?php echo $row['image_id_card']; ?></a></h4>
-                                        </div>
+                                       
 
+                                       
                                         <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>สำเนาทะเบียนบ้าน :</h4>
-                                        </div>
-                                        <div class="col-xl-10 col-md-10 col-12 mb-2">
-                                                <h4> <a href="../images/enroll/house/<?php echo $row['image_house_registration']; ?>" target="_blank"><?php echo $row['image_house_registration']; ?></a></h4>
-                                        </div>
-
-                                        <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>สำเนาทรานสคริป :</h4>
-                                        </div>
-                                        <div class="col-xl-10 col-md-10 col-12 mb-2">
-                                                <h4> <a href="../images/enroll/transcript/<?php echo $row['image_transcript']; ?>" target="_blank"><?php echo $row['image_transcript']; ?></a></h4>
-                                        </div>
-
-                                        <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>วันที่สร้าง :</h4>
+                                                <h4>วันที่สมัคร :</h4>
                                         </div>
                                         <div class="col-xl-10 col-md-10 col-12 mb-2">
                                                 <h4><?php echo $row['create_date']; ?></h4>
                                         </div>
 
-                                        <div class="col-xl-2 col-md-2 col-12 mb-2">
-                                                <h4>วันที่อัปเดตล่าสุด :</h4>
-                                        </div>
-                                        <div class="col-xl-10 col-md-10 col-12 mb-2">
-                                                <h4><?php echo $row['update_date']; ?></h4>
-                                        </div>
+                                        
 
                                     </div>
                                       

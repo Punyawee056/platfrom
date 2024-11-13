@@ -170,89 +170,21 @@
                                     </div>
 
                                     <div class="row ml-2 mr-2">
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="id_card">เลขบัตรประชาชน :</label>
-                                                <input type="number" class="form-control" name="id_card" maxlength="13"
-                                                    placeholder="เลขบัตรประชาชน" value="<?php echo $row['id_card']; ?>" required>
-                                            </div>
-                                        </div>
+                                       
 
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="fname_en">ชื่อ (ภาษาอังกฤษ) :</label>
-                                                <input type="text" class="form-control" name="fname_en" maxlength="100"
-                                                    placeholder="ชื่อ (ภาษาอังกฤษ)" value="<?php echo $row['fname_en']; ?>" required>
-                                            </div>
-                                        </div>
+                                      
 
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="lname_en">นามสกุล (ภาษาอังกฤษ) :</label>
-                                                <input type="text" class="form-control" name="lname_en" maxlength="100"
-                                                    placeholder="นามสกุล (ภาษาอังกฤษ)" value="<?php echo $row['lname_en']; ?>" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="blood_type">กรุ๊ปเลือด :</label>
-                                                <input type="text" class="form-control" name="blood_type" maxlength="50"
-                                                    placeholder="กรุ๊ปเลือด" value="<?php echo $row['blood_type']; ?>">
-                                            </div>
-                                        </div>
+                                       
                                     </div>
 
                                     <div class="row ml-2 mr-2">
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="ethnicity">เชื้อชาติ :</label>
-                                                <input type="text" class="form-control" name="ethnicity" maxlength="50"
-                                                    placeholder="เชื้อชาติ" value="<?php echo $row['ethnicity']; ?>">
-                                            </div>
-                                        </div>
+                                        
 
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="nationality">สัญชาติ :</label>
-                                                <input type="text" class="form-control" name="nationality" maxlength="50"
-                                                    placeholder="สัญชาติ" value="<?php echo $row['nationality']; ?>">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="religion">ศาสนา :</label>
-                                                <input type="text" class="form-control" name="religion" maxlength="50"
-                                                    placeholder="ศาสนา" value="<?php echo $row['religion']; ?>">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="congenital_disease">โรคประจำตัว :</label>
-                                                <input type="text" class="form-control" name="congenital_disease" maxlength="100"
-                                                    placeholder="โรคประจำตัว" value="<?php echo $row['congenital_disease']; ?>">
-                                            </div>
-                                        </div>
+                                      
                                     </div>
 
                                     <div class="row ml-2 mr-2">
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="weight">น้ำหนัก :</label>
-                                                <input type="number" class="form-control" name="weight" maxlength="50"
-                                                    placeholder="น้ำหนัก" value="<?php echo $row['weight']; ?>">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="height">ส่วนสูง :</label>
-                                                <input type="number" class="form-control" name="height" maxlength="50"
-                                                    placeholder="ส่วนสูง" value="<?php echo $row['height']; ?>">
-                                            </div>
-                                        </div>
+                                       
 
                                         <div class="col-xl-3 col-md-3 col-12 mb-2">
                                             <div class="form-group">
@@ -274,7 +206,7 @@
                                     <div class="row ml-2 mr-2">
                                         <div class="col-xl-12 col-md-12 col-12 mb-2">
                                             <div class="form-group">
-                                                <label for="address">ที่อยู่ :</label>
+                                                <label for="address">เหตุผลในการสมัครเข้าชมรมนี้ :</label>
                                                 <input type="text" class="form-control" name="address"
                                                     placeholder="ที่อยู่" value="<?php echo $row['address']; ?>">
                                             </div>
@@ -367,12 +299,7 @@
                                             </select>
                                         </div>
                                       
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="remark">หมายเหตุ :</label>
-                                                <textarea class="form-control" style="padding: 0.438rem 1rem !important;" name="remark" rows="1" placeholder="หมายเหตุ"><?php echo $row['remark']; ?></textarea>
-                                            </div>
-                                        </div>
+                                       
                                     </div>
                                       
                                     <div class="row ml-2 mr-2">
@@ -398,71 +325,9 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="weight">สำเนาบัตรประชาชน :</label>
-                                                <a href="../images/enroll/id_card/<?php echo $row['image_id_card']; ?>" target="_blank"><?php echo $row['image_id_card']; ?></a>
-                                                <div class="media flex-column flex-md-row text-center">
-                                                <div class="media-body">
-                                                    <div class="d-inline-block">
-                                                        <div class="form-group mb-0">
-                                                            <div class="custom-file">
-                                                                <input type="file" class="custom-file-input" name="image_id_card"
-                                                                    id="image_id_card">
-                                                                <label class="custom-file-label"
-                                                                    for="image_id_card">อัปโหลดสำเนาบัตรประชาชน</label>
-                                                            </div>
-                                                        </div>
-                                                    </div><br>
-                                                    <small class="text-muted ">ไฟล์ขนาดไม่เกิน 100 mb.</small>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                 
 
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="weight">สำเนาทะเบียนบ้าน :</label>
-                                                <a href="../images/enroll/house/<?php echo $row['image_house_registration']; ?>" target="_blank"><?php echo $row['image_house_registration']; ?></a>
-                                                <div class="media flex-column flex-md-row text-center">
-                                                <div class="media-body">
-                                                    <div class="d-inline-block">
-                                                        <div class="form-group mb-0">
-                                                            <div class="custom-file">
-                                                                <input type="file" class="custom-file-input" name="image_house_registration"
-                                                                    id="image_house_registration">
-                                                                <label class="custom-file-label"
-                                                                    for="image_house_registration">อัปโหลดสำเนาทะเบียนบ้าน</label>
-                                                            </div>
-                                                        </div>
-                                                    </div><br>
-                                                    <small class="text-muted ">ไฟล์ขนาดไม่เกิน 100 mb.</small>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="weight">สำเนาทรานสคริป :</label>
-                                                <a href="../images/enroll/transcript/<?php echo $row['image_transcript']; ?>" target="_blank"><?php echo $row['image_transcript']; ?></a>
-                                                <div class="media flex-column flex-md-row text-center">
-                                                <div class="media-body">
-                                                    <div class="d-inline-block">
-                                                        <div class="form-group mb-0">
-                                                            <div class="custom-file">
-                                                                <input type="file" class="custom-file-input" name="image_transcript"
-                                                                    id="image_transcript">
-                                                                <label class="custom-file-label"
-                                                                    for="image_transcript">อัปโหลดสำเนาทรานสคริป</label>
-                                                            </div>
-                                                        </div>
-                                                    </div><br>
-                                                    <small class="text-muted ">ไฟล์ขนาดไม่เกิน 100 mb.</small>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
 
                                 </div>

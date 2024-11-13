@@ -59,15 +59,71 @@
     @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
 
     body {
-        font-family: 'Prompt', sans-serif;
-        font-size: 16px;
-    }
+    font-family: 'Prompt', sans-serif;
+    font-size: 16px;
+    background-color: #b22222; /* สีแดงเลือดหมูใหม่ */
+    color: #fff; /* สีข้อความเป็นขาว */
+}
 
-    .new-title-css {
-        font-family: 'Prompt', sans-serif;
-        font-size: 26px;
-        font-weight: revert;
-    }
+.new-title-css {
+    font-family: 'Prompt', sans-serif;
+    font-size: 26px;
+    font-weight: revert;
+    color: #ffcc00; /* สีทองใหม่สำหรับหัวข้อ */
+}
+
+/* ปรับสีแบรนด์โลโก้ */
+.brand-text-custom {
+    color: #ffcc00; /* สีทองใหม่ */
+}
+
+/* ปรับสีของฟอร์มและปุ่ม */
+.card-body {
+    background-color: #b22222; /* สีแดงเลือดหมูใหม่ */
+    border-radius: 8px;
+    padding: 20px;
+}
+
+
+.form-label {
+    color: #ffcc00; /* สีทองใหม่สำหรับข้อความป้าย */
+}
+
+.form-password-toggle .form-control {
+    border-color: #ffcc00; /* กรอบของฟอร์มเป็นสีทองใหม่ */
+}
+
+.btn-primary {
+    background-color: #ffcc00 !important;  /* สีทองใหม่ */
+    border-color: #ffcc00 !important;      /* กรอบปุ่มเป็นสีทองใหม่ */
+    color: #b22222 !important;             /* ข้อความบนปุ่มเป็นสีแดงเลือดหมูใหม่ */
+}
+
+
+
+.btn-primary:hover {
+    background-color: #D4AF37 !important; /* ปรับสีทองให้เข้มขึ้นเมื่อโฮเวอร์ */
+}
+
+a {
+    color: #ffcc00; /* สีทองใหม่สำหรับลิงก์ */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* เพิ่มความสวยงามสำหรับไอคอน */
+.input-group-text {
+    background-color: #ffcc00; /* สีทองใหม่สำหรับไอคอน */
+    color: #b22222; /* สีแดงเลือดหมูใหม่สำหรับไอคอน */
+}
+
+.input-group-merge .form-control {
+    border-color: #ffcc00; /* กรอบของฟอร์มเป็นสีทองใหม่ */
+}
+
     </style>
     <!-- END: fonts-->
 
@@ -173,90 +229,19 @@
                                        
                                     </div>
 
-                                    <div class="row ml-2 mr-2">
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="id_card">เลขบัตรประชาชน :</label>
-                                                <input type="number" class="form-control" name="id_card" maxlength="13"
-                                                    placeholder="เลขบัตรประชาชน" required>
-                                            </div>
-                                        </div>
+                                   
 
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="fname_en">ชื่อ (ภาษาอังกฤษ) :</label>
-                                                <input type="text" class="form-control" name="fname_en" maxlength="100"
-                                                    placeholder="ชื่อ (ภาษาอังกฤษ)" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="lname_en">นามสกุล (ภาษาอังกฤษ) :</label>
-                                                <input type="text" class="form-control" name="lname_en" maxlength="100"
-                                                    placeholder="นามสกุล (ภาษาอังกฤษ)" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="blood_type">กรุ๊ปเลือด :</label>
-                                                <input type="text" class="form-control" name="blood_type" maxlength="50"
-                                                    placeholder="กรุ๊ปเลือด">
-                                            </div>
-                                        </div>
-                                    </div>
+                                  
 
                                     <div class="row ml-2 mr-2">
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
+                                        
+                                    <div class="col-xl-3 col-md-3 col-12 mb-2">
                                             <div class="form-group">
-                                                <label for="ethnicity">เชื้อชาติ :</label>
-                                                <input type="text" class="form-control" name="ethnicity" maxlength="50"
-                                                    placeholder="เชื้อชาติ">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="nationality">สัญชาติ :</label>
-                                                <input type="text" class="form-control" name="nationality" maxlength="50"
-                                                    placeholder="สัญชาติ">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="religion">ศาสนา :</label>
+                                                <label for="religion">รหัสนักศึกษา :</label>
                                                 <input type="text" class="form-control" name="religion" maxlength="50"
-                                                    placeholder="ศาสนา">
+                                                    placeholder="รหัสนักศึกษา">
                                             </div>
-                                        </div>
-
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="congenital_disease">โรคประจำตัว :</label>
-                                                <input type="text" class="form-control" name="congenital_disease" maxlength="100"
-                                                    placeholder="โรคประจำตัว">
-                                            </div>
-                                        </div>
                                     </div>
-
-                                    <div class="row ml-2 mr-2">
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="weight">น้ำหนัก :</label>
-                                                <input type="number" class="form-control" name="weight" maxlength="50"
-                                                    placeholder="น้ำหนัก">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="height">ส่วนสูง :</label>
-                                                <input type="number" class="form-control" name="height" maxlength="50"
-                                                    placeholder="ส่วนสูง">
-                                            </div>
-                                        </div>
 
                                         <div class="col-xl-3 col-md-3 col-12 mb-2">
                                             <div class="form-group">
@@ -275,22 +260,13 @@
                                         </div>
                                     </div>
 
-                                    <div class="row ml-2 mr-2">
-                                        <div class="col-xl-12 col-md-12 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="address">ที่อยู่ :</label>
-                                                <input type="text" class="form-control" name="address"
-                                                    placeholder="ที่อยู่">
-                                            </div>
-                                        </div>
-                                    </div>
                                         
                                     <div class="row ml-2 mr-2">
                                         <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <label>ปีการศึกษา : </label>
+                                            <label>ระดับชั้นปีการศึกษา : </label>
                                             <select class="select2 form-control form-control-md" name="ayear_id"
                                                 required>
-                                                <option value="">-- เลือก ปีการศึกษา --</option>
+                                                <option value="">-- เลือก ระดับชั้นปีการศึกษา --</option>
                                                 <?php 
                                                 $sql_ayear = "SELECT * FROM `academic_year` ORDER BY `name` ASC";
                                                 $result_ayear = $conn->query($sql_ayear);
@@ -308,10 +284,10 @@
                                         </div>
 
                                         <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <label>ระดับชั้น : </label>
+                                            <label>หมวดหมู่ชมรม : </label>
                                             <select class="select2 form-control form-control-md" name="level_id" id="level"
                                                     required>
-                                                    <option value="">-- เลือก ระดับชั้น --</option>
+                                                    <option value="">-- เลือก หมวดหมู่ชมรม --</option>
                                                         <?php 
                                                             $sql_level = "SELECT * FROM `level` ORDER BY `code` ASC";
                                                             $result_level = $conn->query($sql_level);
@@ -324,16 +300,17 @@
                                         </div>
 
                                         <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <label>สาขา :</label>
+                                            <label>ชมรม :</label>
                                             <select class="select2 form-control form-control-md" id="major" name="major_id" required>
-                                                <option value="">-- เลือก สาขา --</option>
+                                                <option value="">-- เลือก ชมรม --</option>
                                             </select>
                                         </div>
                                       
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
+                                        <div class="col-xl-12 col-md-12 col-12 mb-2">
                                             <div class="form-group">
-                                                <label for="remark">หมายเหตุ :</label>
-                                                <textarea class="form-control" style="padding: 0.438rem 1rem !important;" name="remark" rows="1" placeholder="หมายเหตุ"></textarea>
+                                                <label for="address">เหตุผลในการสมัครเข้าชมรมนี้ :</label>
+                                                <input type="text" class="form-control" name="address"
+                                                    placeholder="เหตุผลในการสมัครเข้าชมรมนี้ ">
                                             </div>
                                         </div>
                                     </div>
@@ -360,69 +337,11 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="weight">สำเนาบัตรประชาชน :</label>
-                                                <div class="media flex-column flex-md-row text-center">
-                                                <div class="media-body">
-                                                    <div class="d-inline-block">
-                                                        <div class="form-group mb-0">
-                                                            <div class="custom-file">
-                                                                <input type="file" class="custom-file-input" name="image_id_card"
-                                                                    id="image_id_card" required>
-                                                                <label class="custom-file-label"
-                                                                    for="image_id_card">อัปโหลดสำเนาบัตรประชาชน</label>
-                                                            </div>
-                                                        </div>
-                                                    </div><br>
-                                                    <small class="text-muted ">ไฟล์ขนาดไม่เกิน 100 mb.</small>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                   
+                                        
 
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="weight">สำเนาทะเบียนบ้าน :</label>
-                                                <div class="media flex-column flex-md-row text-center">
-                                                <div class="media-body">
-                                                    <div class="d-inline-block">
-                                                        <div class="form-group mb-0">
-                                                            <div class="custom-file">
-                                                                <input type="file" class="custom-file-input" name="image_house_registration"
-                                                                    id="image_house_registration" required>
-                                                                <label class="custom-file-label"
-                                                                    for="image_house_registration">อัปโหลดสำเนาทะเบียนบ้าน</label>
-                                                            </div>
-                                                        </div>
-                                                    </div><br>
-                                                    <small class="text-muted ">ไฟล์ขนาดไม่เกิน 100 mb.</small>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-3 col-md-3 col-12 mb-2">
-                                            <div class="form-group">
-                                                <label for="weight">สำเนาทรานสคริป :</label>
-                                                <div class="media flex-column flex-md-row text-center">
-                                                <div class="media-body">
-                                                    <div class="d-inline-block">
-                                                        <div class="form-group mb-0">
-                                                            <div class="custom-file">
-                                                                <input type="file" class="custom-file-input" name="image_transcript"
-                                                                    id="image_transcript" required>
-                                                                <label class="custom-file-label"
-                                                                    for="image_transcript">อัปโหลดสำเนาทรานสคริป</label>
-                                                            </div>
-                                                        </div>
-                                                    </div><br>
-                                                    <small class="text-muted ">ไฟล์ขนาดไม่เกิน 100 mb.</small>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h4 style="font-style: oblique; color: red;">**ระบบจะสร้าง user สำหรับ login ให้อัตโนมัติ โดยใช้อีเมล ส่วนรหัสผ่านคือเบอร์โทรศัพท์</h4>
+                                  
+                                        
                                     </div>
 
                                 </div>

@@ -90,16 +90,14 @@ a:hover {
 
 </style>
 <!-- END: fonts-->
-
-<?php //if($row_me['role'] == 1 || $row_me['role'] == '2') { ?>
-<!-- BEGIN: Header-->
-<nav
-    class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow new-title-css">
+<!-- END: Head-->
+<nav class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow new-title-css">
     <div class="navbar-container d-flex content">
         <div class="bookmark-wrapper d-flex align-items-center">
             <ul class="nav navbar-nav d-xl-none">
-                <li class="nav-item"><a class="nav-link menu-toggle" href="javascript:void(0);"><i class="ficon"
-                            data-feather="menu"></i></a></li>
+                <li class="nav-item">
+                    <a class="nav-link menu-toggle" href="javascript:void(0);"><i class="ficon" data-feather="menu"></i></a>
+                </li>
             </ul>
             <ul class="nav navbar-nav bookmark-icons">
                 <li class="nav-item d-none d-lg-block">
@@ -112,32 +110,22 @@ a:hover {
                 <a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="javascript:void(0);"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="user-nav d-sm-flex d-none">
-                        <span
-                            class="user-name font-weight-bolder"><?php echo $row_me['fname'] .' '. $row_me['lname']; ?></span>
-                        <span class="user-status"><?php echo  $row_me['email']; ?></span>
                     </div>
                     <div class="avatar bg-light-dark mr-1">
-                        <?php if(isset($row_me['image']) && $row_me['image'] !='avatar.png'){ ?>
-                        <img class="avatar-content" src="../images/user/<?php echo  $row_me['image']; ?>" height="40"
-                            width="40">
-                        <?php } else { ?>
-                        <span class="avatar-content" height="40"
-                            width="40"><?php echo substr($row_me['fname'],0,1).substr($row_me['lname'],0,1) ?></span>
-                        <?php } ?>
                     </div>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-user">
-                    <a class="dropdown-item" href="../profile/index.php"><i class="mr-50" data-feather="user"></i>
-                        โปรไฟล์</a>
-                    <a class="dropdown-item" href="../profile/password.php"><i class="mr-50" data-feather="key"></i>
-                        เปลี่ยนรหัสผ่าน</a>
-                    <div class="dropdown-divider"></div><a class="dropdown-item" href="../logout.php"><i class="mr-50"
-                            data-feather="power"></i> ออกจากระบบ</a>
-                </div>
+            </li>
+            
+            <!-- Login button added here -->
+            <li class="nav-item">
+                <a class="nav-link" href="../../pages/login.php">
+                    <button class="btn btn-primary">Login</button>
+                </a>
             </li>
         </ul>
     </div>
 </nav>
+
 <!-- END: Header-->
 
 
@@ -244,50 +232,28 @@ a:hover {
     <div class="shadow-bottom"></div>
     <div class="main-menu-content">
         <ul class="navigation navigation-main new-title-css" id="main-menu-navigation" data-menu="menu-navigation">
-            <?php if($row_me['role'] == '1') { ?>
-            <li class=" navigation-header"><span data-i18n="ข้อมูลพื้นฐาน" class="new-title-css">ข้อมูลพื้นฐาน</span><i
-                    data-feather="more-horizontal"></i>
-            </li>
-            <li class=" nav-item"><a
-                    class="d-flex align-items-center <?php echo $pages == 'academic_year' ? 'custom_active': '' ?>"
-                    href="../academic_year/index.php"><i data-feather="calendar"></i><span class="menu-title text-truncate"
-                        data-i18n="academic_year">ระดับชั้นปีการศึกษา</span></a>
-            </li>
-            <li class=" nav-item"><a
-                    class="d-flex align-items-center <?php echo $pages == 'level' ? 'custom_active': '' ?>"
-                    href="../level/index.php"><i data-feather="layers"></i><span class="menu-title text-truncate"
-                        data-i18n="level">หมวดหมู่ชมรม-ชมรม</span></a>
-            </li>
+     
+     
             
-            <?php } ?>
+          
 
             <li class=" navigation-header"><span data-i18n="การรับสมัคร" class="new-title-css">การรับสมัคร</span><i
                     data-feather="more-horizontal"></i>
             </li>
             <li class=" nav-item"><a
                    
-                    href="../enroll/index.php"><i data-feather="tablet"></i><span class="menu-title text-truncate"
+                    href="../../pages/enroll.php"><i data-feather="tablet"></i><span class="menu-title text-truncate"
                         data-i18n="enroll">สมัครเข้าชมรม</span></a>
             </li>
 
             <li class=" nav-item"><a
                     
-                    href="../enroll/club.php"><i data-feather="tablet"></i><span class="menu-title text-truncate"
+                    href=""><i data-feather="tablet"></i><span class="menu-title text-truncate"
                         data-i18n="enroll">ชมรม</span></a>
             </li>
             
-            <?php if($row_me['role'] == '1' || $row_me['role'] == '2') { ?>
-                <li class=" navigation-header"><span data-i18n="ผู้ใช้งาน" class="new-title-css">ข้อมูลผู้ใช้งาน</span><i
-                    data-feather="more-horizontal"></i>
-                </li>
-                <li class=" nav-item"><a
-                        class="d-flex align-items-center <?php echo $pages == 'user' ? 'custom_active': '' ?>"
-                        href="../user/index.php"><i data-feather="user"></i><span class="menu-title text-truncate"
-                            data-i18n="user">ผู้ใช้งาน</span></a>
-                </li>
-            <?php } ?>
+      
         </ul>
     </div>
 </div>
-<!-- END: Main Menu-->
-<?php //} ?>
+<!-- BEGIN: Body-->
